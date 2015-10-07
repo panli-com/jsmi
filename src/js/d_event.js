@@ -1,6 +1,6 @@
 ;(function($){
     var handlers = {},_jid = 1
-    /* 绑定事件 start */
+    /* 绑定事件 start  */
     $.fn.extend({
         bind: function(event, func) {return this.each(function(){add(this, event, func)})},
         unbind:function(event, func) {return this.each(function(){remove(this, event, func)})},

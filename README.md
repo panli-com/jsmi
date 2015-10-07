@@ -1,7 +1,53 @@
 JSMi
 ---
 
-
+### 信息框
+```
+Pan.open({
+    content: '您好',
+    time: 2
+});
+```
+### 提示框
+```
+Pan.open({
+    title: '提示',
+    content: 'Pan 移动版和PC版不能同时使用在同一页面。'
+});
+```
+### 询问框
+```
+Pan.open({
+    title: '提示',
+    content: '您确定要刷新一下本页面吗？',
+    btn: ['嗯', '不要'],
+    yes: function(index){
+        location.reload();
+        Pan.close(index);
+    }
+});
+```
+### 页面层
+```
+var pagei = Pan.open({
+    type: 1, //1代表页面层
+    content: '可传入html<button class="closediy">关闭</button>',
+    style: 'width:300px; height:200px; border:none;',
+    success: function(oPan){
+        var cla = 'getElementsByClassName';
+        oPan[cla]('closediy')[0].onclick = function(){
+            Pan.close(pagei)
+        }
+    }
+});
+```
+### 加载层
+```
+Pan.open({
+    type: 2,
+    content: ''
+});
+```
 
 > 1. jQuery 的目标是兼容所有主流浏览器，这就意味着它的大量代码对移动端的浏览器是无用或者低效的。
 > 2. 而 JSMi 只针对先进浏览器(支持HTML5,CSS3)、移动端浏览器编写，使用js新方法实现jQuery API，因此体积更小、效率更高.
