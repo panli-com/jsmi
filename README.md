@@ -1,6 +1,8 @@
 JSMi
 ---
 
+![Famous brand](logo.png)
+
 ### 信息框
 ```
 Pan.open({
@@ -47,6 +49,11 @@ Pan.open({
     type: 2,
     content: ''
 });
+```
+
+### 谷歌统计代码
+```
+Pan.googleCount();
 ```
 
 > 1. jQuery 的目标是兼容所有主流浏览器，这就意味着它的大量代码对移动端的浏览器是无用或者低效的。
@@ -1252,11 +1259,11 @@ $("#box").trigger('abc:click',['wwww']) //⇒ self 触发并传一个参数进�
 > $.get(url, [data], [function(data, status, xhr){ ... }], [dataType])  ⇒ XMLHttpRequest   
 
 ```js
-$.get('http://127.0.0.1/api.php?wcj=123', function(cdata) {
+$.get('http://nnn.li/api.php?wcj=123', function(cdata) {
     console.log('ok', cdata)
 },'json')
 
-$.get('http://127.0.0.1/api.php?wcj=123',{"JSMi":4}, function(cdata) {
+$.get('http://nnn.li/api.php?wcj=123',{"JSMi":4}, function(cdata) {
     console.log('ok', cdata)
 })
 ```
@@ -1266,7 +1273,7 @@ $.get('http://127.0.0.1/api.php?wcj=123',{"JSMi":4}, function(cdata) {
 1.JSMi独有....
 
 ```js
-$.ajax('GET', 'http://127.0.0.1/api.php', {"wcj":"123","ok":'11'},function(cdata) {
+$.ajax('GET', 'http://nnn.li/api.php', {"wcj":"123","ok":'11'},function(cdata) {
     console.log('ok', cdata)
 })
 ```
@@ -1278,7 +1285,7 @@ $.ajax({
     type:'GET',
     dataType:'json',
     data:{'nike':'a'},
-    url:'http://127.0.0.1/api.php',
+    url:'http://nnn.li/api.php',
     success:function(data){
        console.log('success:',data)
     },
@@ -1293,7 +1300,7 @@ $.ajax({
 $.getJSON(url, function(data, status, xhr){ ... })   
 
 ```js
-$.getJSON('http://127.0.0.1/api.php', function(data){
+$.getJSON('http://nnn.li/api.php', function(data){
   console.log(data)
 })
 ```
@@ -1303,7 +1310,7 @@ JSONP 方式
 
 ```js
 $.ajax({
-    url: 'http://127.0.0.1/api.php?callback',
+    url: 'http://nnn.li/api.php?callback',
     dataType: 'jsonp',
     success: function(data) {
         console.log(data)
@@ -1326,7 +1333,7 @@ $.ajax({
 > $.post(url, [data], function(data, status, xhr){ ... }, [dataType])
 
 ```js
-$.post('http://127.0.0.1/api.php', {'nike':0},
+$.post('http://nnn.li/api.php', {'nike':0},
 function(cdata) {
     console.log('ok', cdata)
 })
@@ -1338,7 +1345,7 @@ function(cdata) {
 
 ```js
 var data = { 'key': 'key', 'from': 'from'}
-$.ajax('POST', 'http://127.0.0.1/api.php', data,function(data) {
+$.ajax('POST', 'http://nnn.li/api.php', data,function(data) {
     console.log('ok', data)
 },'json')
 ```
@@ -1350,7 +1357,7 @@ $.ajax({
     type:'POST',
     dataType:'json',
     data:{"nike":"123","kacper":{"go":34,"to":100}},
-    url:'http://127.0.0.1/api.php',
+    url:'http://nnn.li/api.php',
     success:function(data){
        console.log('success:',data)
     },
@@ -1362,7 +1369,7 @@ $.ajax({
     type:'POST',
     dataType:'json',
     data:JSON.stringify('{"nike":"123","kacper":{"go":34,"to":100}}'),
-    url:'http://127.0.0.1/api.php',
+    url:'http://nnn.li/api.php',
     success:function(data){
        console.log('success:',data)
     },
@@ -1375,7 +1382,7 @@ $.ajax({
     type:'POST',
     dataType:'json',
     data:JSON.stringify({'nike':'a'}),
-    url:'http://127.0.0.1/api.php',
+    url:'http://nnn.li/api.php',
     success:function(data){
        console.log('success:',data)
     },
@@ -1387,7 +1394,7 @@ $.ajax({
 $.ajax({
     type:'POST',
     data:{'nike':'a'},
-    url:'http://127.0.0.1/api.php',
+    url:'http://nnn.li/api.php',
     success:function(data){
        console.log('success:',data)
     },
@@ -1400,7 +1407,7 @@ $.ajax({
     type:'POST',
     dataType:'json',
     data:{'nike':'a'},
-    url:'http://127.0.0.1/api.php',
+    url:'http://nnn.li/api.php',
     success:function(data){
        console.log('success:',data)
     },
@@ -1408,7 +1415,7 @@ $.ajax({
        console.log('error:',d)
     },
     headers: {
-        "Access-Control-Allow-Origin":"http://pc175.com",
+        "Access-Control-Allow-Origin":"http://zanjs.com",
         "Access-Control-Allow-Headers":"X-Requested-With"
     },
     contentType: 'application/json'
